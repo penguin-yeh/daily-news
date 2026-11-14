@@ -51,7 +51,7 @@
 
 ```html
 <div style="padding:32px 12px;font-family:-apple-system,BlinkMacSystemFont,'PingFang TC','Microsoft JhengHei','Noto Sans TC',Helvetica,Arial,sans-serif;background-color:#f2f0ea">
-<div style="max-width:680px;margin:0 auto;background-color:#fffdf9;border:1px solid #ddd8cc">
+<div style="max-width:820px;margin:0 auto;background-color:#fffdf9;border:1px solid #ddd8cc">
   …所有區塊…
 </div></div>
 ```
