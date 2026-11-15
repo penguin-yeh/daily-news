@@ -28,6 +28,8 @@ jobs:
         run: git fetch origin "+refs/heads/${GITHUB_REF_NAME}:refs/remotes/origin/${GITHUB_REF_NAME}"
       - name: Sync latest day into main
         run: scripts/sync_latest.sh "${GITHUB_REF_NAME}"
+      - name: Sync new RSS reports into main
+        run: scripts/sync_reports.sh "${GITHUB_REF_NAME}"
       - name: Push main
         run: |
           if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
