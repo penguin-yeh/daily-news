@@ -11,10 +11,3 @@ Penguin 每日報報的網頁版（GitHub Pages）。
 1. 當天內容整理成 `YYYY-MM-DD.html`（風格見 `STYLE.md`），再複製成 `index.html`（永遠是最新一天）。
 2. commit 並 push 到 `main`（GitHub Pages 是 legacy 模式，從 main 根目錄直接部署，push 後會自動重新發布）。
 3. 若產生頁面的 session 只能 push 到 `claude/*` 分支，`.github/workflows/sync-main.yml` 會自動把最新一天同步進 `main`，不需要手動操作或寄信通知。
-
-## RSS 每日報報（reports/）
-
-「RSS 每日報報」改成不寄信，每天存成一個獨立檔案：`reports/YYYY-MM-DD.html`（同一天重跑變 `-2`、`-3`，**不會覆蓋**舊檔），總目錄在 `reports/index.html`，網址 <https://penguin-yeh.github.io/daily-news/reports/>。
-
-- 產生與發佈由 `skill-rss-classifier` repo 的排程負責，使用 `scripts/publish_report.py`（本 repo 保留一份鏡像）。
-- 若排程只能推到 `claude/*` 分支，`sync-main.yml` 會用 `scripts/sync_reports.sh` 把 main 還沒有的日報同步進來（只新增、不覆蓋）。
