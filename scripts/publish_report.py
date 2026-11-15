@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""publish_report.py — 把日報存成 reports/YYYY-MM-DD.html（鏡像自 skill-rss-classifier/scripts/publish_report.py，兩邊保持一致）。
+publish_report.py — 把日報存成 reports/YYYY-MM-DD.html（鏡像自 skill-rss-classifier/scripts/publish_report.py，兩邊保持一致）。
 
 用法：
     python3 scripts/publish_report.py /tmp/digest.html --date 2026-11-15
