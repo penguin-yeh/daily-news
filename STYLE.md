@@ -218,3 +218,7 @@
 - 每天一個 `YYYY-MM-DD.html`，同時把最新一天複製成 `index.html`。
 - 已存在的舊日期頁面不用回頭改，除非明確被要求；新風格從當天起套用。
 - commit 訊息格式維持 `Daily news YYYY-MM-DD`。
+
+## 日期導覽列（必備）
+
+每個 `YYYY-MM-DD.html` 與 `index.html` 最上方必須有「◀ 前一天／日期選單／後一天 ▶」。**不要手寫**：產生頁面後執行 `python3 scripts/add_nav.py`，它會用 `<!--nav-->…<!--/nav-->` 標記插入或更新導覽列（行內 CSS、不需要 `<script>`）。不准刪掉或手改標記內的內容；新頁面的 HTML 裡不要自己放導覽。
