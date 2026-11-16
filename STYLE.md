@@ -142,9 +142,15 @@
 ```html
 <div style="background-color:#f6ecd9;border-left:3px solid #9c6b12;border-radius:0 6px 6px 0;padding:10px 14px;margin:8px 0 4px;font-family:-apple-system,BlinkMacSystemFont,'PingFang TC','Microsoft JhengHei','Noto Sans TC',Helvetica,Arial,sans-serif;font-size:12.5px;color:#374151;line-height:1.8">
   <strong style="color:#7a5209">新舊比較：</strong>
-  <strong>先前：</strong>…　<strong>新在哪：</strong>…　<strong>解決了什麼：</strong>…
+  <ul style="margin:6px 0 0;padding-left:18px">
+    <li style="margin:2px 0"><strong>先前：</strong>…</li>
+    <li style="margin:2px 0"><strong>新在哪：</strong>…</li>
+    <li style="margin:2px 0"><strong>解決了什麼：</strong>…</li>
+  </ul>
 </div>
 ```
+
+**一律條列式（每項一行）**，不要把三項擠成同一段。若產生出來的頁面仍是擠在一起的舊寫法，執行 `python3 scripts/format_comparison.py` 轉換（冪等；`sync-main.yml` 也會自動跑）。
 
 資訊不足以做嚴謹比較時，照實寫「本文未提供足夠脈絡」，不要硬編。
 
