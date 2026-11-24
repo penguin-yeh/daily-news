@@ -9,6 +9,14 @@
 3. 禁止的做法：漸層、陰影、圓角大於 10px、emoji 當裝飾（除了下面指定的 🗞️ 與 ⚠️）、`hover` 動畫、`position:sticky`。需要互動（日期切換）才可以用少量 `<script>`，且按鈕與下拉選單也要用行內樣式，配色比照本文件。
 4. 頁面容器寬度上限 **820px**（見第 3 節；2026-11 從 680px 放寬，因為不再寄 email、不用遷就 Gmail 安全寬度，桌面瀏覽太窄會很浪費螢幕），手機也要能讀，不可出現橫向捲軸。
 5. 所有文字用繁體中文。每篇文章的連結、標題、日期必須對應原始來源，不可手抄錯位、不可編造。
+6. `<head>` 在 `</title>` 之後必須有本站 favicon 這四行（檔案在 repo 根目錄，不是外部 icon 套件）。舊的 icon 連結要換掉：
+
+```html
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="site.webmanifest">
+```
 
 ## 1. 設計 token（色票與字型）
 
